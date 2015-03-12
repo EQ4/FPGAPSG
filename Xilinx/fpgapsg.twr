@@ -37,10 +37,12 @@ Clock clk to Pad
              |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination  |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 -------------+-----------------+------------+-----------------+------------+------------------+--------+
-sample_out<2>|        11.538(R)|      SLOW  |         5.578(R)|      FAST  |clk_BUFGP         |   0.000|
-sample_out<3>|        11.722(R)|      SLOW  |         5.676(R)|      FAST  |clk_BUFGP         |   0.000|
-sample_out<4>|        10.498(R)|      SLOW  |         4.871(R)|      FAST  |clk_BUFGP         |   0.000|
-sample_out<5>|        11.009(R)|      SLOW  |         5.156(R)|      FAST  |clk_BUFGP         |   0.000|
+sample_out<0>|        12.063(R)|      SLOW  |         5.015(R)|      FAST  |clk_BUFGP         |   0.000|
+sample_out<1>|        11.364(R)|      SLOW  |         4.863(R)|      FAST  |clk_BUFGP         |   0.000|
+sample_out<2>|        13.005(R)|      SLOW  |         5.200(R)|      FAST  |clk_BUFGP         |   0.000|
+sample_out<3>|        12.688(R)|      SLOW  |         5.220(R)|      FAST  |clk_BUFGP         |   0.000|
+sample_out<4>|        13.305(R)|      SLOW  |         5.200(R)|      FAST  |clk_BUFGP         |   0.000|
+sample_out<5>|        13.644(R)|      SLOW  |         5.381(R)|      FAST  |clk_BUFGP         |   0.000|
 -------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -48,11 +50,11 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    3.880|         |         |         |
+clk            |    4.601|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Thu Mar 12 07:50:56 2015 
+Analysis completed Thu Mar 12 12:49:58 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:

@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: fpgapsg.prj
@@ -122,11 +122,8 @@ Parsing architecture <behavioral> of entity <fpgapsg>.
 Elaborating entity <fpgapsg> (architecture <behavioral>) with generics from library <work>.
 
 Elaborating entity <generator> (architecture <behavioral>) with generics from library <work>.
-WARNING:HDLCompiler:1127 - "/home/moffitt/Development/FPGAPSG/Source/generator.vhd" Line 69: Assignment to sample ignored, since the identifier is never used
-WARNING:HDLCompiler:92 - "/home/moffitt/Development/FPGAPSG/Source/fpgapsg.vhd" Line 49: gen1_out_data should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/moffitt/Development/FPGAPSG/Source/fpgapsg.vhd" Line 56: init_counter should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/moffitt/Development/FPGAPSG/Source/fpgapsg.vhd" Line 58: init_counter should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "/home/moffitt/Development/FPGAPSG/Source/fpgapsg.vhd" Line 59: gen1_addr should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/moffitt/Development/FPGAPSG/Source/fpgapsg.vhd" Line 62: gen_out should be on the sensitivity list of the process
+WARNING:HDLCompiler:634 - "/home/moffitt/Development/FPGAPSG/Source/fpgapsg.vhd" Line 43: Net <gen_we[2]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -136,72 +133,72 @@ Synthesizing Unit <fpgapsg>.
     Related source file is "/home/moffitt/Development/FPGAPSG/Source/fpgapsg.vhd".
         addr_w = 8
         data_w = 32
-        num_channels = 1
+        gen_depth = 4
+        num_channels = 3
 WARNING:Xst:647 - Input <addr_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <data_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <ce_n> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <we_n> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <re_n> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 8-bit adder for signal <init_counter[7]_GND_5_o_add_4_OUT> created at line 58.
-    Found 5-bit adder for signal <gen1_addr[4]_GND_5_o_add_5_OUT> created at line 59.
-WARNING:Xst:737 - Found 1-bit latch for signal <init_counter<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <init_counter<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <init_counter<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <init_counter<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <init_counter<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <init_counter<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <init_counter<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <gen1_addr<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <gen1_addr<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <gen1_addr<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <gen1_addr<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <gen1_addr<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <init_counter<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 8-bit comparator greater for signal <init_counter[7]_GND_5_o_LessThan_4_o> created at line 56
+WARNING:Xst:653 - Signal <gen_we<2:1>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 32-bit register for signal <gen_periods<1>>.
+    Found 32-bit register for signal <gen_periods<0>>.
+    Found 1-bit register for signal <gen_we<0>>.
+    Found 8-bit register for signal <init_counter>.
+    Found 5-bit register for signal <gen_addr>.
+    Found 4-bit register for signal <gen_data>.
+    Found 32-bit register for signal <gen_periods<2>>.
+    Found 6-bit adder for signal <n0050> created at line 62.
+    Found 6-bit adder for signal <sample_out> created at line 62.
+    Found 8-bit adder for signal <init_counter[7]_GND_5_o_add_3_OUT> created at line 74.
+    Found 5-bit adder for signal <gen_addr[4]_GND_5_o_add_4_OUT> created at line 75.
+    Found 8-bit comparator greater for signal <init_counter[7]_GND_5_o_LessThan_3_o> created at line 69
+    Found 8-bit comparator lessequal for signal <GND_5_o_init_counter[7]_LessThan_6_o> created at line 78
     Summary:
-	inferred   2 Adder/Subtractor(s).
-	inferred  13 Latch(s).
-	inferred   1 Comparator(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred 114 D-type flip-flop(s).
+	inferred   2 Comparator(s).
 Unit <fpgapsg> synthesized.
 
 Synthesizing Unit <generator>.
     Related source file is "/home/moffitt/Development/FPGAPSG/Source/generator.vhd".
         sample_addr_bits = 5
         sample_data_bits = 2
+    Found 32x4-bit dual-port RAM <Mram_sample> for signal <sample>.
     Found 5-bit register for signal <idx>.
     Found 4-bit register for signal <out_data>.
     Found 32-bit register for signal <count>.
     Found 5-bit adder for signal <idx[4]_GND_7_o_add_2_OUT> created at line 43.
     Found 32-bit adder for signal <count[31]_GND_7_o_add_4_OUT> created at line 46.
     Found 32-bit comparator greater for signal <n0000> created at line 38
-    Found 5-bit comparator greater for signal <PWR_7_o_idx[4]_LessThan_12_o> created at line 59
     Summary:
+	inferred   1 RAM(s).
 	inferred   2 Adder/Subtractor(s).
 	inferred  41 D-type flip-flop(s).
-	inferred   2 Comparator(s).
-	inferred   4 Multiplexer(s).
+	inferred   1 Comparator(s).
 Unit <generator> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 4
- 32-bit adder                                          : 1
- 5-bit adder                                           : 2
+# RAMs                                                 : 3
+ 32x4-bit dual-port RAM                                : 3
+# Adders/Subtractors                                   : 10
+ 32-bit adder                                          : 3
+ 5-bit adder                                           : 4
+ 6-bit adder                                           : 2
  8-bit adder                                           : 1
-# Registers                                            : 3
- 32-bit register                                       : 1
- 4-bit register                                        : 1
- 5-bit register                                        : 1
-# Latches                                              : 13
- 1-bit latch                                           : 13
-# Comparators                                          : 3
- 32-bit comparator greater                             : 1
- 5-bit comparator greater                              : 1
+# Registers                                            : 16
+ 1-bit register                                        : 1
+ 32-bit register                                       : 6
+ 4-bit register                                        : 4
+ 5-bit register                                        : 4
+ 8-bit register                                        : 1
+# Comparators                                          : 5
+ 32-bit comparator greater                             : 3
  8-bit comparator greater                              : 1
-# Multiplexers                                         : 4
- 4-bit 2-to-1 multiplexer                              : 4
+ 8-bit comparator lessequal                            : 1
 
 =========================================================================
 
@@ -209,79 +206,345 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+WARNING:Xst:1710 - FF/Latch <gen_periods_2_7> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_6> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_5> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_4> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_3> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_2> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_1> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_0> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_31> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_30> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_29> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_28> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_27> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_26> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_25> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_24> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_23> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_22> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_21> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_20> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_19> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_18> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_17> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_16> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_31> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_30> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_29> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_28> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_27> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_26> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_25> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_24> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_23> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_22> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_21> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_20> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_19> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_18> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_17> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_16> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_15> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_14> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_13> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_12> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_11> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_10> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_9> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_8> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_23> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_22> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_21> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_20> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_19> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_18> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_17> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_16> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_15> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_14> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_13> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_12> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_11> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_10> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_9> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_8> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_7> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_6> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_5> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_4> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_3> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_2> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_1> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_0> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_15> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_14> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_13> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_12> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_11> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_10> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_9> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_8> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_7> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_6> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_5> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_4> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_3> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_2> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_1> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_0> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_31> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_30> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_29> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_28> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_27> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_26> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_25> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_24> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <fpgapsg>.
+The following registers are absorbed into counter <init_counter>: 1 register on signal <init_counter>.
+The following registers are absorbed into counter <gen_addr>: 1 register on signal <gen_addr>.
+Unit <fpgapsg> synthesized (advanced).
 
 Synthesizing (advanced) Unit <generator>.
 The following registers are absorbed into counter <count>: 1 register on signal <count>.
 The following registers are absorbed into counter <idx>: 1 register on signal <idx>.
+INFO:Xst:3231 - The small RAM <Mram_sample> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 4-bit                     |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <we_n>          | low      |
+    |     addrA          | connected to signal <addr_in>       |          |
+    |     diA            | connected to signal <data_in>       |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 4-bit                     |          |
+    |     addrB          | connected to signal <idx>           |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
 Unit <generator> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
+# RAMs                                                 : 3
+ 32x4-bit dual-port distributed RAM                    : 3
 # Adders/Subtractors                                   : 2
- 5-bit adder                                           : 1
- 8-bit adder                                           : 1
-# Counters                                             : 2
- 32-bit up counter                                     : 1
- 5-bit up counter                                      : 1
-# Registers                                            : 4
- Flip-Flops                                            : 4
-# Comparators                                          : 3
- 32-bit comparator greater                             : 1
- 5-bit comparator greater                              : 1
+ 6-bit adder                                           : 2
+# Counters                                             : 8
+ 32-bit up counter                                     : 3
+ 5-bit up counter                                      : 4
+ 8-bit up counter                                      : 1
+# Registers                                            : 113
+ Flip-Flops                                            : 113
+# Comparators                                          : 5
+ 32-bit comparator greater                             : 3
  8-bit comparator greater                              : 1
-# Multiplexers                                         : 4
- 4-bit 2-to-1 multiplexer                              : 4
+ 8-bit comparator lessequal                            : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2261 - The FF/Latch <out_data_0> in Unit <generator> is equivalent to the following 3 FFs/Latches, which will be removed : <out_data_1> <out_data_2> <out_data_3> 
+WARNING:Xst:1710 - FF/Latch <gen_periods_0_7> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_6> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_5> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_4> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_3> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_2> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_1> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_0> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_31> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_30> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_29> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_28> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_27> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_26> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_25> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_24> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_23> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_22> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_21> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_20> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_19> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_18> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_17> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_16> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_31> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_30> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_29> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_28> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_27> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_26> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_25> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_24> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_23> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_22> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_21> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_20> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_19> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_18> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_17> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_16> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_15> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_14> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_13> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_12> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_11> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_10> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_9> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_0_8> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_23> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_22> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_21> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_20> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_19> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_18> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_17> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_16> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_15> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_14> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_13> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_12> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_11> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_10> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_9> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_8> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_7> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_6> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_5> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_4> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_3> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_2> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_1> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_0> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_15> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_14> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_13> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_12> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_11> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_10> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_9> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_8> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_7> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_6> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_5> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_4> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_3> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_2> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_1> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_1_0> (without init value) has a constant value of 1 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_31> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_30> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_29> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_28> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_27> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_26> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_25> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <gen_periods_2_24> (without init value) has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <fpgapsg> ...
-
-Optimizing unit <generator> ...
-WARNING:Xst:2677 - Node <init_counter_6> of sequential type is unconnected in block <fpgapsg>.
-WARNING:Xst:2677 - Node <init_counter_4> of sequential type is unconnected in block <fpgapsg>.
-WARNING:Xst:2677 - Node <init_counter_3> of sequential type is unconnected in block <fpgapsg>.
-WARNING:Xst:2677 - Node <init_counter_2> of sequential type is unconnected in block <fpgapsg>.
-WARNING:Xst:2677 - Node <init_counter_1> of sequential type is unconnected in block <fpgapsg>.
-WARNING:Xst:2677 - Node <init_counter_7> of sequential type is unconnected in block <fpgapsg>.
-WARNING:Xst:2677 - Node <init_counter_0> of sequential type is unconnected in block <fpgapsg>.
-WARNING:Xst:2677 - Node <init_counter_5> of sequential type is unconnected in block <fpgapsg>.
-WARNING:Xst:2677 - Node <gen1_addr_3> of sequential type is unconnected in block <fpgapsg>.
-WARNING:Xst:2677 - Node <gen1_addr_2> of sequential type is unconnected in block <fpgapsg>.
-WARNING:Xst:2677 - Node <gen1_addr_1> of sequential type is unconnected in block <fpgapsg>.
-WARNING:Xst:2677 - Node <gen1_addr_0> of sequential type is unconnected in block <fpgapsg>.
-WARNING:Xst:2677 - Node <gen1_addr_4> of sequential type is unconnected in block <fpgapsg>.
-WARNING:Xst:1293 - FF/Latch <gen1/count_11> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_12> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_13> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_14> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_15> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_16> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_17> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_18> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_19> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_20> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_21> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_22> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_23> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_24> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_25> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_26> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_27> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_28> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_29> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_30> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_31> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <generate_gens[0].genx/count_13> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[0].genx/count_12> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[0].genx/count_11> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[0].genx/count_10> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[1].genx/count_31> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[1].genx/count_30> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[1].genx/count_29> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[1].genx/count_28> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[1].genx/count_27> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[1].genx/count_26> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[1].genx/count_25> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[1].genx/count_24> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[1].genx/count_23> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[1].genx/count_22> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[1].genx/count_21> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[1].genx/count_20> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[1].genx/count_19> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[0].genx/count_31> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[0].genx/count_30> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[0].genx/count_29> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[0].genx/count_28> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[0].genx/count_27> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[0].genx/count_26> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[0].genx/count_25> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[0].genx/count_24> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[0].genx/count_23> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[0].genx/count_22> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[0].genx/count_21> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[0].genx/count_20> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[0].genx/count_19> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[0].genx/count_18> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[0].genx/count_17> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[0].genx/count_16> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[0].genx/count_15> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[0].genx/count_14> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[2].genx/count_23> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[2].genx/count_22> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[2].genx/count_21> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[2].genx/count_20> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[2].genx/count_19> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[2].genx/count_18> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[2].genx/count_17> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[2].genx/count_16> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[2].genx/count_15> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[2].genx/count_14> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[2].genx/count_13> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[2].genx/count_12> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[2].genx/count_11> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[2].genx/count_10> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[2].genx/count_9> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <init_counter_7> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <init_counter_6> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[1].genx/count_18> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[1].genx/count_17> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[1].genx/count_16> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[1].genx/count_15> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[1].genx/count_14> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[1].genx/count_13> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[1].genx/count_12> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[1].genx/count_11> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[1].genx/count_10> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[1].genx/count_9> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[2].genx/count_31> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[2].genx/count_30> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[2].genx/count_29> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[2].genx/count_28> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[2].genx/count_27> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[2].genx/count_26> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[2].genx/count_25> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <generate_gens[2].genx/count_24> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <gen_data_0> in Unit <fpgapsg> is equivalent to the following 3 FFs/Latches, which will be removed : <gen_data_1> <gen_data_2> <gen_data_3> 
+INFO:Xst:2261 - The FF/Latch <generate_gens[2].genx/count_0> in Unit <fpgapsg> is equivalent to the following FF/Latch, which will be removed : <generate_gens[1].genx/count_0> 
+INFO:Xst:2261 - The FF/Latch <generate_gens[2].genx/count_1> in Unit <fpgapsg> is equivalent to the following FF/Latch, which will be removed : <generate_gens[1].genx/count_1> 
+INFO:Xst:2261 - The FF/Latch <init_counter_0> in Unit <fpgapsg> is equivalent to the following FF/Latch, which will be removed : <gen_addr_0> 
+INFO:Xst:2261 - The FF/Latch <init_counter_1> in Unit <fpgapsg> is equivalent to the following FF/Latch, which will be removed : <gen_addr_1> 
+INFO:Xst:2261 - The FF/Latch <init_counter_2> in Unit <fpgapsg> is equivalent to the following FF/Latch, which will be removed : <gen_addr_2> 
+INFO:Xst:2261 - The FF/Latch <init_counter_3> in Unit <fpgapsg> is equivalent to the following FF/Latch, which will be removed : <gen_addr_3> 
+INFO:Xst:2261 - The FF/Latch <init_counter_4> in Unit <fpgapsg> is equivalent to the following FF/Latch, which will be removed : <gen_addr_4> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block fpgapsg, actual ratio is 1.
+INFO:Xst:2399 - RAMs <generate_gens[2].genx/Mram_sample1>, <generate_gens[2].genx/Mram_sample2> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <generate_gens[2].genx/Mram_sample1>, <generate_gens[2].genx/Mram_sample3> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <generate_gens[2].genx/Mram_sample1>, <generate_gens[2].genx/Mram_sample4> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <generate_gens[1].genx/Mram_sample1>, <generate_gens[1].genx/Mram_sample2> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <generate_gens[1].genx/Mram_sample1>, <generate_gens[1].genx/Mram_sample3> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <generate_gens[1].genx/Mram_sample1>, <generate_gens[1].genx/Mram_sample4> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <generate_gens[0].genx/Mram_sample1>, <generate_gens[0].genx/Mram_sample2> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <generate_gens[0].genx/Mram_sample1>, <generate_gens[0].genx/Mram_sample3> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <generate_gens[0].genx/Mram_sample1>, <generate_gens[0].genx/Mram_sample4> are equivalent, second RAM is removed
+Found area constraint ratio of 100 (+ 5) on block fpgapsg, actual ratio is 5.
+INFO:Xst:2260 - The FF/Latch <generate_gens[1].genx/out_data_3> in Unit <fpgapsg> is equivalent to the following 3 FFs/Latches : <generate_gens[1].genx/out_data_2> <generate_gens[1].genx/out_data_1> <generate_gens[1].genx/out_data_0> 
+INFO:Xst:2260 - The FF/Latch <generate_gens[2].genx/out_data_3> in Unit <fpgapsg> is equivalent to the following 3 FFs/Latches : <generate_gens[2].genx/out_data_2> <generate_gens[2].genx/out_data_1> <generate_gens[2].genx/out_data_0> 
+INFO:Xst:2260 - The FF/Latch <generate_gens[0].genx/out_data_3> in Unit <fpgapsg> is equivalent to the following 3 FFs/Latches : <generate_gens[0].genx/out_data_2> <generate_gens[0].genx/out_data_1> <generate_gens[0].genx/out_data_0> 
 
 Final Macro Processing ...
 
@@ -289,8 +552,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 17
- Flip-Flops                                            : 17
+# Registers                                            : 61
+ Flip-Flops                                            : 61
 
 =========================================================================
 
@@ -313,20 +576,24 @@ Top Level Output File Name         : fpgapsg.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 63
+# BELS                             : 176
 #      GND                         : 1
-#      INV                         : 1
-#      LUT1                        : 10
-#      LUT2                        : 16
-#      LUT3                        : 1
-#      LUT4                        : 1
-#      LUT5                        : 4
-#      LUT6                        : 1
-#      MUXCY                       : 16
+#      INV                         : 6
+#      LUT1                        : 30
+#      LUT2                        : 19
+#      LUT3                        : 11
+#      LUT4                        : 5
+#      LUT5                        : 14
+#      LUT6                        : 7
+#      MUXCY                       : 50
 #      VCC                         : 1
-#      XORCY                       : 11
-# FlipFlops/Latches                : 17
-#      FD                          : 17
+#      XORCY                       : 32
+# FlipFlops/Latches                : 61
+#      FD                          : 39
+#      FDE                         : 6
+#      FDR                         : 16
+# RAMS                             : 3
+#      RAM32X1D                    : 3
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 6
@@ -339,16 +606,18 @@ Selected Device : 6slx4cpg196-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              17  out of   4800     0%  
- Number of Slice LUTs:                   34  out of   2400     1%  
-    Number used as Logic:                34  out of   2400     1%  
+ Number of Slice Registers:              61  out of   4800     1%  
+ Number of Slice LUTs:                   98  out of   2400     4%  
+    Number used as Logic:                92  out of   2400     3%  
+    Number used as Memory:                6  out of   1200     0%  
+       Number used as RAM:                6
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     34
-   Number with an unused Flip Flop:      17  out of     34    50%  
-   Number with an unused LUT:             0  out of     34     0%  
-   Number of fully used LUT-FF pairs:    17  out of     34    50%  
-   Number of unique control sets:         1
+ Number of LUT Flip Flop pairs used:     99
+   Number with an unused Flip Flop:      38  out of     99    38%  
+   Number with an unused LUT:             1  out of     99     1%  
+   Number of fully used LUT-FF pairs:    60  out of     99    60%  
+   Number of unique control sets:         4
 
 IO Utilization: 
  Number of IOs:                          50
@@ -378,7 +647,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 17    |
+clk                                | BUFGP                  | 64    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -389,9 +658,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 4.028ns (Maximum Frequency: 248.247MHz)
+   Minimum period: 4.192ns (Maximum Frequency: 238.578MHz)
    Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: 4.240ns
+   Maximum output required time after clock: 8.284ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -400,51 +669,54 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 4.028ns (frequency: 248.247MHz)
-  Total number of paths / destination ports: 267 / 17
+  Clock period: 4.192ns (frequency: 238.578MHz)
+  Total number of paths / destination ports: 892 / 117
 -------------------------------------------------------------------------
-Delay:               4.028ns (Levels of Logic = 8)
-  Source:            gen1/count_7 (FF)
-  Destination:       gen1/idx_3 (FF)
+Delay:               4.192ns (Levels of Logic = 8)
+  Source:            generate_gens[2].genx/count_0 (FF)
+  Destination:       generate_gens[2].genx/count_0 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: gen1/count_7 to gen1/idx_3
+  Data Path: generate_gens[2].genx/count_0 to generate_gens[2].genx/count_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               3   0.525   1.196  gen1/count_7 (gen1/count_7)
-     LUT5:I0->O            1   0.254   0.000  gen1/Mcompar_n0000_lut<0> (gen1/Mcompar_n0000_lut<0>)
-     MUXCY:S->O            1   0.215   0.000  gen1/Mcompar_n0000_cy<0> (gen1/Mcompar_n0000_cy<0>)
-     MUXCY:CI->O           1   0.023   0.000  gen1/Mcompar_n0000_cy<1> (gen1/Mcompar_n0000_cy<1>)
-     MUXCY:CI->O           1   0.023   0.000  gen1/Mcompar_n0000_cy<2> (gen1/Mcompar_n0000_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  gen1/Mcompar_n0000_cy<3> (gen1/Mcompar_n0000_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  gen1/Mcompar_n0000_cy<4> (gen1/Mcompar_n0000_cy<4>)
-     MUXCY:CI->O          16   0.235   1.182  gen1/Mcompar_n0000_cy<5> (gen1/Mcompar_n0000_cy<5>)
-     LUT5:I4->O            1   0.254   0.000  gen1/idx_3_rstpot (gen1/idx_3_rstpot)
-     FD:D                      0.074          gen1/idx_3
+     FDR:C->Q              4   0.525   1.234  generate_gens[2].genx/count_0 (generate_gens[2].genx/count_0)
+     LUT5:I0->O            1   0.254   0.000  generate_gens[2].genx/Mcompar_n0000_lut<0> (generate_gens[2].genx/Mcompar_n0000_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  generate_gens[2].genx/Mcompar_n0000_cy<0> (generate_gens[2].genx/Mcompar_n0000_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  generate_gens[2].genx/Mcompar_n0000_cy<1> (generate_gens[2].genx/Mcompar_n0000_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  generate_gens[2].genx/Mcompar_n0000_cy<2> (generate_gens[2].genx/Mcompar_n0000_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  generate_gens[2].genx/Mcompar_n0000_cy<3> (generate_gens[2].genx/Mcompar_n0000_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  generate_gens[2].genx/Mcompar_n0000_cy<4> (generate_gens[2].genx/Mcompar_n0000_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  generate_gens[2].genx/Mcompar_n0000_cy<5> (generate_gens[2].genx/Mcompar_n0000_cy<5>)
+     MUXCY:CI->O          14   0.262   1.126  generate_gens[2].genx/Mcompar_n0000_cy<6> (generate_gens[2].genx/Mcompar_n0000_cy<6>)
+     FDR:R                     0.459          generate_gens[2].genx/count_0
     ----------------------------------------
-    Total                      4.028ns (1.650ns logic, 2.378ns route)
-                                       (41.0% logic, 59.0% route)
+    Total                      4.192ns (1.832ns logic, 2.360ns route)
+                                       (43.7% logic, 56.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 4 / 4
+  Total number of paths / destination ports: 105 / 6
 -------------------------------------------------------------------------
-Offset:              4.240ns (Levels of Logic = 1)
-  Source:            gen1/out_data_0 (FF)
+Offset:              8.284ns (Levels of Logic = 4)
+  Source:            generate_gens[0].genx/out_data_3 (FF)
   Destination:       sample_out<5> (PAD)
   Source Clock:      clk rising
 
-  Data Path: gen1/out_data_0 to sample_out<5>
+  Data Path: generate_gens[0].genx/out_data_3 to sample_out<5>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               4   0.525   0.803  gen1/out_data_0 (gen1/out_data_0)
+     FD:C->Q               3   0.525   1.221  generate_gens[0].genx/out_data_3 (generate_gens[0].genx/out_data_3)
+     LUT6:I0->O            2   0.254   1.181  Madd_sample_out_lut<0>31 (Madd_sample_out_lut<0>3)
+     LUT6:I0->O            2   0.254   1.002  Madd_sample_out_cy<0>41 (Madd_sample_out_cy<0>3)
+     LUT4:I0->O            1   0.254   0.681  Madd_sample_out_cy<0>51 (sample_out_5_OBUF)
      OBUF:I->O                 2.912          sample_out_5_OBUF (sample_out<5>)
     ----------------------------------------
-    Total                      4.240ns (3.437ns logic, 0.803ns route)
-                                       (81.1% logic, 18.9% route)
+    Total                      8.284ns (4.199ns logic, 4.085ns route)
+                                       (50.7% logic, 49.3% route)
 
 =========================================================================
 
@@ -456,21 +728,21 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    4.028|         |         |         |
+clk            |    4.192|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.15 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.59 secs
  
 --> 
 
 
-Total memory usage is 387084 kilobytes
+Total memory usage is 387228 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   57 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of warnings :  270 (   0 filtered)
+Number of infos    :   21 (   0 filtered)
 

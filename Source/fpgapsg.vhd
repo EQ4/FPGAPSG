@@ -6,7 +6,8 @@ entity fpgapsg is
 	generic (
 		addr_w: integer := 8;
 		data_w: integer := 32;
-		num_channels: integer := 1);
+		gen_depth: integer := 4;
+		num_channels: integer := 3);
 	port (
 		clk: in std_logic;
 		ce_n: in std_logic; -- Pull low to use
@@ -22,43 +23,66 @@ end fpgapsg;
 
 architecture behavioral of fpgapsg is
 
-signal gen1_clk: std_logic;
-signal gen1_addr: std_logic_vector(4 downto 0) := "00000";
-signal gen1_data: std_logic_vector(3 downto 0);
-signal gen1_we_n: std_logic;
-signal gen1_count_max: std_logic_vector(31 downto 0);
-signal gen1_out_data: std_logic_vector(3 downto 0);
+constant A_440: std_logic_vector(31 downto 0) := "00000000000000000001000111000000";
 
 signal init_counter: std_logic_vector(7 downto 0) := "00000000";
 
+-- All generators share clock, address, and data.
+signal gen_clk: std_logic;
+signal gen_addr: std_logic_vector(4 downto 0) := "00000";
+signal gen_data: std_logic_vector((gen_depth - 1) downto 0) := "0000";
+
+-- Types for controllable parameters 
+type gen_amp_arr is array((num_channels - 1) downto 0) of std_logic_vector(3 downto 0);
+type gen_we_arr is array ((num_channels - 1) downto 0) of std_logic;
+type gen_period_arr is array ((num_channels - 1) downto 0) of std_logic_vector(31 downto 0);
+type gen_out_arr is array((num_channels - 1) downto 0) of std_logic_vector((gen_depth - 1) downto 0);
+
+-- The parameter arrays
+signal gen_amp: gen_amp_arr;
+signal gen_we: gen_we_arr;
+signal gen_periods: gen_period_arr;
+signal gen_out: gen_out_arr;
+
 begin
-	gen1: entity work.generator(behavioral) port map (
-		gen1_clk, 
-		gen1_data, 
-		gen1_addr, 
-		gen1_we_n, 
-		gen1_count_max, 
-		gen1_out_data
-	);
-	
-	gen1_count_max <= "00000000000000000000010001110000";
+	generate_gens: for i in 0 to (num_channels - 1) generate
+		genx: entity work.generator(behavioral) port map (
+			gen_clk, 
+			gen_data, 
+			gen_addr, 
+			gen_we(i), 
+			gen_periods(i), 
+			gen_out(i)
+		);
+	end generate generate_gens;
 	
 	setup_clock: process (clk)
 	begin
-		gen1_clk <= clk;
-		sample_out <= gen1_out_data & "00";
+		gen_clk <= clk;
+		sample_out <= '0' & ('0' & gen_out(0)) + ('0' & gen_out(1)) + ('0' & gen_out(2));
 	end process;
 	
-	gen1_data <= init_counter(5 downto 2);
 	
 	write_temp_sample: process (clk)
 	begin
-		if (init_counter < 32) then
-			gen1_we_n <= '0';
-			init_counter <= init_counter + 1;
-			gen1_addr <= gen1_addr + 1;
-		else
-			gen1_we_n <= '1';
+		if (rising_edge(clk)) then
+			if (init_counter < 32) then
+				gen_periods(0) <= "00000000000000000000001000111000";
+				gen_periods(1) <= "00000000000000000000000111000011";
+				gen_periods(2) <= "00000000000000000000000101111011";
+				gen_we(0) <= '0';
+				init_counter <= init_counter + 1;
+				gen_addr <= gen_addr + 1;
+				--gen1_data <= init_counter(4 downto 1);
+				--if (init_counter = "00000" or init_counter = "00010" or init_counter > 16) then
+				if (init_counter > 15) then
+					gen_data <= "1111";
+				else
+					gen_data <= "0000";
+				end if;
+			else
+				gen_we(0) <= '1';
+			end if;
 		end if;
 	end process;
 	

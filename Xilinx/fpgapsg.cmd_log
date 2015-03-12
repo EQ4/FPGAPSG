@@ -111,3 +111,143 @@ map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -reg
 par -w -intstyle ise -ol high -mt off fpgapsg_map.ncd fpgapsg.ncd fpgapsg.pcf 
 trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml fpgapsg.twx fpgapsg.ncd -o fpgapsg.twr fpgapsg.pcf -ucf fpgapsg.ucf 
 bitgen -intstyle ise -f fpgapsg.ut fpgapsg.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpgapsg.ucf -p xc6slx4-cpg196-2 fpgapsg.ngc fpgapsg.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fpgapsg_map.ncd fpgapsg.ngd fpgapsg.pcf 
+par -w -intstyle ise -ol high -mt off fpgapsg_map.ncd fpgapsg.ncd fpgapsg.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml fpgapsg.twx fpgapsg.ncd -o fpgapsg.twr fpgapsg.pcf -ucf fpgapsg.ucf 
+bitgen -intstyle ise -f fpgapsg.ut fpgapsg.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpgapsg.ucf -p xc6slx4-cpg196-2 fpgapsg.ngc fpgapsg.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fpgapsg_map.ncd fpgapsg.ngd fpgapsg.pcf 
+par -w -intstyle ise -ol high -mt off fpgapsg_map.ncd fpgapsg.ncd fpgapsg.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml fpgapsg.twx fpgapsg.ncd -o fpgapsg.twr fpgapsg.pcf -ucf fpgapsg.ucf 
+bitgen -intstyle ise -f fpgapsg.ut fpgapsg.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpgapsg.ucf -p xc6slx4-cpg196-2 fpgapsg.ngc fpgapsg.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fpgapsg_map.ncd fpgapsg.ngd fpgapsg.pcf 
+par -w -intstyle ise -ol high -mt off fpgapsg_map.ncd fpgapsg.ncd fpgapsg.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml fpgapsg.twx fpgapsg.ncd -o fpgapsg.twr fpgapsg.pcf -ucf fpgapsg.ucf 
+bitgen -intstyle ise -f fpgapsg.ut fpgapsg.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpgapsg.ucf -p xc6slx4-cpg196-2 fpgapsg.ngc fpgapsg.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fpgapsg_map.ncd fpgapsg.ngd fpgapsg.pcf 
+par -w -intstyle ise -ol high -mt off fpgapsg_map.ncd fpgapsg.ncd fpgapsg.pcf 
+bitgen -intstyle ise -f fpgapsg.ut fpgapsg.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpgapsg.ucf -p xc6slx4-cpg196-2 fpgapsg.ngc fpgapsg.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fpgapsg_map.ncd fpgapsg.ngd fpgapsg.pcf 
+par -w -intstyle ise -ol high -mt off fpgapsg_map.ncd fpgapsg.ncd fpgapsg.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml fpgapsg.twx fpgapsg.ncd -o fpgapsg.twr fpgapsg.pcf -ucf fpgapsg.ucf 
+bitgen -intstyle ise -f fpgapsg.ut fpgapsg.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpgapsg.ucf -p xc6slx4-cpg196-2 fpgapsg.ngc fpgapsg.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fpgapsg_map.ncd fpgapsg.ngd fpgapsg.pcf 
+par -w -intstyle ise -ol high -mt off fpgapsg_map.ncd fpgapsg.ncd fpgapsg.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml fpgapsg.twx fpgapsg.ncd -o fpgapsg.twr fpgapsg.pcf -ucf fpgapsg.ucf 
+bitgen -intstyle ise -f fpgapsg.ut fpgapsg.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpgapsg.ucf -p xc6slx4-cpg196-2 fpgapsg.ngc fpgapsg.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fpgapsg_map.ncd fpgapsg.ngd fpgapsg.pcf 
+par -w -intstyle ise -ol high -mt off fpgapsg_map.ncd fpgapsg.ncd fpgapsg.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml fpgapsg.twx fpgapsg.ncd -o fpgapsg.twr fpgapsg.pcf -ucf fpgapsg.ucf 
+bitgen -intstyle ise -f fpgapsg.ut fpgapsg.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpgapsg.ucf -p xc6slx4-cpg196-2 fpgapsg.ngc fpgapsg.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fpgapsg_map.ncd fpgapsg.ngd fpgapsg.pcf 
+par -w -intstyle ise -ol high -mt off fpgapsg_map.ncd fpgapsg.ncd fpgapsg.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml fpgapsg.twx fpgapsg.ncd -o fpgapsg.twr fpgapsg.pcf -ucf fpgapsg.ucf 
+bitgen -intstyle ise -f fpgapsg.ut fpgapsg.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpgapsg.ucf -p xc6slx4-cpg196-2 fpgapsg.ngc fpgapsg.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fpgapsg_map.ncd fpgapsg.ngd fpgapsg.pcf 
+par -w -intstyle ise -ol high -mt off fpgapsg_map.ncd fpgapsg.ncd fpgapsg.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml fpgapsg.twx fpgapsg.ncd -o fpgapsg.twr fpgapsg.pcf -ucf fpgapsg.ucf 
+bitgen -intstyle ise -f fpgapsg.ut fpgapsg.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpgapsg.ucf -p xc6slx4-cpg196-2 fpgapsg.ngc fpgapsg.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fpgapsg_map.ncd fpgapsg.ngd fpgapsg.pcf 
+par -w -intstyle ise -ol high -mt off fpgapsg_map.ncd fpgapsg.ncd fpgapsg.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml fpgapsg.twx fpgapsg.ncd -o fpgapsg.twr fpgapsg.pcf -ucf fpgapsg.ucf 
+bitgen -intstyle ise -f fpgapsg.ut fpgapsg.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpgapsg.ucf -p xc6slx4-cpg196-2 fpgapsg.ngc fpgapsg.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fpgapsg_map.ncd fpgapsg.ngd fpgapsg.pcf 
+par -w -intstyle ise -ol high -mt off fpgapsg_map.ncd fpgapsg.ncd fpgapsg.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml fpgapsg.twx fpgapsg.ncd -o fpgapsg.twr fpgapsg.pcf -ucf fpgapsg.ucf 
+bitgen -intstyle ise -f fpgapsg.ut fpgapsg.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpgapsg.ucf -p xc6slx4-cpg196-2 fpgapsg.ngc fpgapsg.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fpgapsg_map.ncd fpgapsg.ngd fpgapsg.pcf 
+par -w -intstyle ise -ol high -mt off fpgapsg_map.ncd fpgapsg.ncd fpgapsg.pcf 
+bitgen -intstyle ise -f fpgapsg.ut fpgapsg.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpgapsg.ucf -p xc6slx4-cpg196-2 fpgapsg.ngc fpgapsg.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fpgapsg_map.ncd fpgapsg.ngd fpgapsg.pcf 
+par -w -intstyle ise -ol high -mt off fpgapsg_map.ncd fpgapsg.ncd fpgapsg.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml fpgapsg.twx fpgapsg.ncd -o fpgapsg.twr fpgapsg.pcf -ucf fpgapsg.ucf 
+bitgen -intstyle ise -f fpgapsg.ut fpgapsg.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpgapsg.ucf -p xc6slx4-cpg196-2 fpgapsg.ngc fpgapsg.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fpgapsg_map.ncd fpgapsg.ngd fpgapsg.pcf 
+par -w -intstyle ise -ol high -mt off fpgapsg_map.ncd fpgapsg.ncd fpgapsg.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml fpgapsg.twx fpgapsg.ncd -o fpgapsg.twr fpgapsg.pcf -ucf fpgapsg.ucf 
+bitgen -intstyle ise -f fpgapsg.ut fpgapsg.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpgapsg.ucf -p xc6slx4-cpg196-2 fpgapsg.ngc fpgapsg.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fpgapsg_map.ncd fpgapsg.ngd fpgapsg.pcf 
+par -w -intstyle ise -ol high -mt off fpgapsg_map.ncd fpgapsg.ncd fpgapsg.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml fpgapsg.twx fpgapsg.ncd -o fpgapsg.twr fpgapsg.pcf -ucf fpgapsg.ucf 
+bitgen -intstyle ise -f fpgapsg.ut fpgapsg.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpgapsg.ucf -p xc6slx4-cpg196-2 fpgapsg.ngc fpgapsg.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fpgapsg_map.ncd fpgapsg.ngd fpgapsg.pcf 
+par -w -intstyle ise -ol high -mt off fpgapsg_map.ncd fpgapsg.ncd fpgapsg.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml fpgapsg.twx fpgapsg.ncd -o fpgapsg.twr fpgapsg.pcf -ucf fpgapsg.ucf 
+bitgen -intstyle ise -f fpgapsg.ut fpgapsg.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpgapsg.ucf -p xc6slx4-cpg196-2 fpgapsg.ngc fpgapsg.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fpgapsg_map.ncd fpgapsg.ngd fpgapsg.pcf 
+par -w -intstyle ise -ol high -mt off fpgapsg_map.ncd fpgapsg.ncd fpgapsg.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml fpgapsg.twx fpgapsg.ncd -o fpgapsg.twr fpgapsg.pcf -ucf fpgapsg.ucf 
+bitgen -intstyle ise -f fpgapsg.ut fpgapsg.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpgapsg.ucf -p xc6slx4-cpg196-2 fpgapsg.ngc fpgapsg.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fpgapsg_map.ncd fpgapsg.ngd fpgapsg.pcf 
+par -w -intstyle ise -ol high -mt off fpgapsg_map.ncd fpgapsg.ncd fpgapsg.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml fpgapsg.twx fpgapsg.ncd -o fpgapsg.twr fpgapsg.pcf -ucf fpgapsg.ucf 
+bitgen -intstyle ise -f fpgapsg.ut fpgapsg.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpgapsg.ucf -p xc6slx4-cpg196-2 fpgapsg.ngc fpgapsg.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fpgapsg_map.ncd fpgapsg.ngd fpgapsg.pcf 
+par -w -intstyle ise -ol high -mt off fpgapsg_map.ncd fpgapsg.ncd fpgapsg.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml fpgapsg.twx fpgapsg.ncd -o fpgapsg.twr fpgapsg.pcf -ucf fpgapsg.ucf 
+bitgen -intstyle ise -f fpgapsg.ut fpgapsg.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpgapsg.ucf -p xc6slx4-cpg196-2 fpgapsg.ngc fpgapsg.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fpgapsg_map.ncd fpgapsg.ngd fpgapsg.pcf 
+par -w -intstyle ise -ol high -mt off fpgapsg_map.ncd fpgapsg.ncd fpgapsg.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml fpgapsg.twx fpgapsg.ncd -o fpgapsg.twr fpgapsg.pcf -ucf fpgapsg.ucf 
+bitgen -intstyle ise -f fpgapsg.ut fpgapsg.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpgapsg.ucf -p xc6slx4-cpg196-2 fpgapsg.ngc fpgapsg.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fpgapsg_map.ncd fpgapsg.ngd fpgapsg.pcf 
+par -w -intstyle ise -ol high -mt off fpgapsg_map.ncd fpgapsg.ncd fpgapsg.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml fpgapsg.twx fpgapsg.ncd -o fpgapsg.twr fpgapsg.pcf -ucf fpgapsg.ucf 
+bitgen -intstyle ise -f fpgapsg.ut fpgapsg.ncd 
+xst -intstyle ise -ifn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.xst" -ofn "/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fpgapsg.ucf -p xc6slx4-cpg196-2 fpgapsg.ngc fpgapsg.ngd  
+map -intstyle ise -p xc6slx4-cpg196-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o fpgapsg_map.ncd fpgapsg.ngd fpgapsg.pcf 
+par -w -intstyle ise -ol high -mt off fpgapsg_map.ncd fpgapsg.ncd fpgapsg.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml fpgapsg.twx fpgapsg.ncd -o fpgapsg.twr fpgapsg.pcf -ucf fpgapsg.ucf 
+bitgen -intstyle ise -f fpgapsg.ut fpgapsg.ncd 

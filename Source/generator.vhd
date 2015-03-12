@@ -37,8 +37,8 @@ begin
 		if (rising_edge(clk)) then
 			if (count >= count_max) then
 				count <= U32_ZERO;
-				if (idx = "11111") then
-					idx <= "00000";
+				if (idx = (2**sample_addr_bits) - 1) then
+					idx <= (others => '0');
 				else
 					idx <= idx + 1;
 				end if;
@@ -52,16 +52,17 @@ begin
 	output_proc: process (clk)
 	begin
 		if (rising_edge(clk)) then
-			if (idx = "00000") then
-				out_data <= "1111";
-			elsif (idx = "00010") then
-				out_data <= "1111";
-			elsif (idx > 16) then
-				out_data <= "1111";
-			else
-				out_data <= "0000";
-			end if;
-			-- out_data <= sample(to_integer(unsigned(idx)));
+		
+		--	if (idx = 0) then
+		--		out_data <= "1111";
+		--	elsif (idx = 2) then
+		--		out_data <= "1111";
+		--	elsif (idx > 16) then
+		--		out_data <= "1111";
+		--	else
+		--		out_data <= (others => '0');
+		--	end if;
+			out_data <= sample(to_integer(unsigned(idx)));
 		end if;	
 	end process;
 	

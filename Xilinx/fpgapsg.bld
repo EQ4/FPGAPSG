@@ -27,7 +27,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 396380 kilobytes
+Total memory usage is 396816 kilobytes
 
 Writing NGD file "fpgapsg.ngd" ...
 Total REAL time to NGDBUILD completion:  2 sec
