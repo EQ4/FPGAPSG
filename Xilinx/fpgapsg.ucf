@@ -1,0 +1,7 @@
+NET "clk" LOC = "N8" | IOSTANDARD = LVCMOS33;
+NET "sample_out[0]" LOC = "L13" | IOSTANDARD = LVCMOS33;
+NET "sample_out[1]" LOC = "L14" | IOSTANDARD = LVCMOS33;
+NET "sample_out[2]" LOC = "N12" | IOSTANDARD = LVCMOS33;
+NET "sample_out[3]" LOC = "P12" | IOSTANDARD = LVCMOS33;
+NET "sample_out[4]" LOC = "P7" | IOSTANDARD = LVCMOS33;
+NET "sample_out[5]" LOC = "N6" | IOSTANDARD = LVCMOS33;

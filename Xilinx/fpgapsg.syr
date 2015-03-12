@@ -1,0 +1,476 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: fpgapsg.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "fpgapsg.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "fpgapsg"
+Output Format                      : NGC
+Target Device                      : xc6slx4-2-cpg196
+
+---- Source Options
+Top Module Name                    : fpgapsg
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/moffitt/Development/FPGAPSG/Source/generator.vhd" into library work
+Parsing entity <generator>.
+Parsing architecture <behavioral> of entity <generator>.
+Parsing VHDL file "/home/moffitt/Development/FPGAPSG/Source/fpgapsg.vhd" into library work
+Parsing entity <fpgapsg>.
+Parsing architecture <behavioral> of entity <fpgapsg>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <fpgapsg> (architecture <behavioral>) with generics from library <work>.
+
+Elaborating entity <generator> (architecture <behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:1127 - "/home/moffitt/Development/FPGAPSG/Source/generator.vhd" Line 69: Assignment to sample ignored, since the identifier is never used
+WARNING:HDLCompiler:92 - "/home/moffitt/Development/FPGAPSG/Source/fpgapsg.vhd" Line 49: gen1_out_data should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/moffitt/Development/FPGAPSG/Source/fpgapsg.vhd" Line 56: init_counter should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/moffitt/Development/FPGAPSG/Source/fpgapsg.vhd" Line 58: init_counter should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/moffitt/Development/FPGAPSG/Source/fpgapsg.vhd" Line 59: gen1_addr should be on the sensitivity list of the process
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <fpgapsg>.
+    Related source file is "/home/moffitt/Development/FPGAPSG/Source/fpgapsg.vhd".
+        addr_w = 8
+        data_w = 32
+        num_channels = 1
+WARNING:Xst:647 - Input <addr_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <data_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ce_n> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <we_n> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <re_n> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit adder for signal <init_counter[7]_GND_5_o_add_4_OUT> created at line 58.
+    Found 5-bit adder for signal <gen1_addr[4]_GND_5_o_add_5_OUT> created at line 59.
+WARNING:Xst:737 - Found 1-bit latch for signal <init_counter<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <init_counter<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <init_counter<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <init_counter<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <init_counter<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <init_counter<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <init_counter<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <gen1_addr<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <gen1_addr<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <gen1_addr<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <gen1_addr<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <gen1_addr<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <init_counter<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 8-bit comparator greater for signal <init_counter[7]_GND_5_o_LessThan_4_o> created at line 56
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  13 Latch(s).
+	inferred   1 Comparator(s).
+Unit <fpgapsg> synthesized.
+
+Synthesizing Unit <generator>.
+    Related source file is "/home/moffitt/Development/FPGAPSG/Source/generator.vhd".
+        sample_addr_bits = 5
+        sample_data_bits = 2
+    Found 5-bit register for signal <idx>.
+    Found 4-bit register for signal <out_data>.
+    Found 32-bit register for signal <count>.
+    Found 5-bit adder for signal <idx[4]_GND_7_o_add_2_OUT> created at line 43.
+    Found 32-bit adder for signal <count[31]_GND_7_o_add_4_OUT> created at line 46.
+    Found 32-bit comparator greater for signal <n0000> created at line 38
+    Found 5-bit comparator greater for signal <PWR_7_o_idx[4]_LessThan_12_o> created at line 59
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  41 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   4 Multiplexer(s).
+Unit <generator> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 1
+ 5-bit adder                                           : 2
+ 8-bit adder                                           : 1
+# Registers                                            : 3
+ 32-bit register                                       : 1
+ 4-bit register                                        : 1
+ 5-bit register                                        : 1
+# Latches                                              : 13
+ 1-bit latch                                           : 13
+# Comparators                                          : 3
+ 32-bit comparator greater                             : 1
+ 5-bit comparator greater                              : 1
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 4
+ 4-bit 2-to-1 multiplexer                              : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <generator>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+The following registers are absorbed into counter <idx>: 1 register on signal <idx>.
+Unit <generator> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 5-bit adder                                           : 1
+ 8-bit adder                                           : 1
+# Counters                                             : 2
+ 32-bit up counter                                     : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+# Comparators                                          : 3
+ 32-bit comparator greater                             : 1
+ 5-bit comparator greater                              : 1
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 4
+ 4-bit 2-to-1 multiplexer                              : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <out_data_0> in Unit <generator> is equivalent to the following 3 FFs/Latches, which will be removed : <out_data_1> <out_data_2> <out_data_3> 
+
+Optimizing unit <fpgapsg> ...
+
+Optimizing unit <generator> ...
+WARNING:Xst:2677 - Node <init_counter_6> of sequential type is unconnected in block <fpgapsg>.
+WARNING:Xst:2677 - Node <init_counter_4> of sequential type is unconnected in block <fpgapsg>.
+WARNING:Xst:2677 - Node <init_counter_3> of sequential type is unconnected in block <fpgapsg>.
+WARNING:Xst:2677 - Node <init_counter_2> of sequential type is unconnected in block <fpgapsg>.
+WARNING:Xst:2677 - Node <init_counter_1> of sequential type is unconnected in block <fpgapsg>.
+WARNING:Xst:2677 - Node <init_counter_7> of sequential type is unconnected in block <fpgapsg>.
+WARNING:Xst:2677 - Node <init_counter_0> of sequential type is unconnected in block <fpgapsg>.
+WARNING:Xst:2677 - Node <init_counter_5> of sequential type is unconnected in block <fpgapsg>.
+WARNING:Xst:2677 - Node <gen1_addr_3> of sequential type is unconnected in block <fpgapsg>.
+WARNING:Xst:2677 - Node <gen1_addr_2> of sequential type is unconnected in block <fpgapsg>.
+WARNING:Xst:2677 - Node <gen1_addr_1> of sequential type is unconnected in block <fpgapsg>.
+WARNING:Xst:2677 - Node <gen1_addr_0> of sequential type is unconnected in block <fpgapsg>.
+WARNING:Xst:2677 - Node <gen1_addr_4> of sequential type is unconnected in block <fpgapsg>.
+WARNING:Xst:1293 - FF/Latch <gen1/count_11> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_12> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_13> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_14> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_15> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_16> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_17> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_18> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_19> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_20> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_21> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_22> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_23> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_24> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_25> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_26> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_27> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_28> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_29> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_30> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gen1/count_31> has a constant value of 0 in block <fpgapsg>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block fpgapsg, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 17
+ Flip-Flops                                            : 17
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : fpgapsg.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 63
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 10
+#      LUT2                        : 16
+#      LUT3                        : 1
+#      LUT4                        : 1
+#      LUT5                        : 4
+#      LUT6                        : 1
+#      MUXCY                       : 16
+#      VCC                         : 1
+#      XORCY                       : 11
+# FlipFlops/Latches                : 17
+#      FD                          : 17
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 6
+#      OBUF                        : 6
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx4cpg196-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              17  out of   4800     0%  
+ Number of Slice LUTs:                   34  out of   2400     1%  
+    Number used as Logic:                34  out of   2400     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     34
+   Number with an unused Flip Flop:      17  out of     34    50%  
+   Number with an unused LUT:             0  out of     34     0%  
+   Number of fully used LUT-FF pairs:    17  out of     34    50%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                          50
+ Number of bonded IOBs:                   7  out of    106     6%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 17    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 4.028ns (Maximum Frequency: 248.247MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 4.240ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.028ns (frequency: 248.247MHz)
+  Total number of paths / destination ports: 267 / 17
+-------------------------------------------------------------------------
+Delay:               4.028ns (Levels of Logic = 8)
+  Source:            gen1/count_7 (FF)
+  Destination:       gen1/idx_3 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: gen1/count_7 to gen1/idx_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.525   1.196  gen1/count_7 (gen1/count_7)
+     LUT5:I0->O            1   0.254   0.000  gen1/Mcompar_n0000_lut<0> (gen1/Mcompar_n0000_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  gen1/Mcompar_n0000_cy<0> (gen1/Mcompar_n0000_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  gen1/Mcompar_n0000_cy<1> (gen1/Mcompar_n0000_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  gen1/Mcompar_n0000_cy<2> (gen1/Mcompar_n0000_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  gen1/Mcompar_n0000_cy<3> (gen1/Mcompar_n0000_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  gen1/Mcompar_n0000_cy<4> (gen1/Mcompar_n0000_cy<4>)
+     MUXCY:CI->O          16   0.235   1.182  gen1/Mcompar_n0000_cy<5> (gen1/Mcompar_n0000_cy<5>)
+     LUT5:I4->O            1   0.254   0.000  gen1/idx_3_rstpot (gen1/idx_3_rstpot)
+     FD:D                      0.074          gen1/idx_3
+    ----------------------------------------
+    Total                      4.028ns (1.650ns logic, 2.378ns route)
+                                       (41.0% logic, 59.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              4.240ns (Levels of Logic = 1)
+  Source:            gen1/out_data_0 (FF)
+  Destination:       sample_out<5> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: gen1/out_data_0 to sample_out<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               4   0.525   0.803  gen1/out_data_0 (gen1/out_data_0)
+     OBUF:I->O                 2.912          sample_out_5_OBUF (sample_out<5>)
+    ----------------------------------------
+    Total                      4.240ns (3.437ns logic, 0.803ns route)
+                                       (81.1% logic, 18.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.028|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.15 secs
+ 
+--> 
+
+
+Total memory usage is 387084 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   57 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

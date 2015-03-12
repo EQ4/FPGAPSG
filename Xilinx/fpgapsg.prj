@@ -1,0 +1,2 @@
+vhdl work "../Source/generator.vhd"
+vhdl work "../Source/fpgapsg.vhd"

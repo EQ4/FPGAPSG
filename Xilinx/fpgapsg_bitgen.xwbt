@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.ncd
+OUTFILE=/home/moffitt/Development/FPGAPSG/Xilinx/fpgapsg.bit
+FAMILY=Spartan6
+PART=xc6slx4-2cpg196
+WORKINGDIR=/home/moffitt/Development/FPGAPSG/Xilinx
+LICENSE=WebPack
+USER_INFO=210836052_0_0_553
